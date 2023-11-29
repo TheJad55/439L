@@ -1,0 +1,41 @@
+{% extends "contact_app/base.html" %}
+
+{% block title %}
+Contact List
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Contact List</h1>
+
+<a href="{% url 'contact_create' %}" class="bg-dark btn btn-primary mb-3">Add New Contact</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Age</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for contact in contacts %}
+        <tr>
+            <td>{{ contact.name }}</td>
+            <td>{{ contact.email_address }}</td>
+            <td>{{ contact.telnumber }}</td>
+            <td>{{ contact.age }}</td>
+            <td>
+                <a href="{% url 'contact_update' contact.id %}" class="btn btn-warning btn-sm">Edit</a>
+                <a href="{% url 'contact_delete' contact.id %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4" class="text-center">No contacts found.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
