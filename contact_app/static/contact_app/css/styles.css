@@ -1,0 +1,62 @@
+/* contact_app/static/contact_app/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    //background-color: rgba(255,255,255,0.2);
+    padding: 20px;
+}
+header {
+    background-color: dark;
+}
+.btn-primary {
+    background-color: black ;
+} 
+
+
+
+h1, h2, h3 {
+    color: white;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add new styles for the table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+th {
+    text-align: left;
+    background-color: #55608f;
+}
+
+
+
+tbody td {
+    position: relative;
+}
+
